@@ -11,9 +11,7 @@ buildscript {
 	}
 }
 
-ext {
-	igniteVersion = '2.7.0'
-}
+
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
@@ -29,10 +27,16 @@ repositories {
 	mavenCentral()
 }
 
+ext {
+	igniteVersion = '2.7.0'
+}
 
 dependencies {
+
 	implementation('org.springframework.boot:spring-boot-starter-web')
-	compile('org.apache.ignite:ignite-core:igniteVersion')
+	implementation("org.apache.ignite:ignite-core:${igniteVersion}")
+	implementation("org.apache.ignite:ignite-indexing:${igniteVersion}")
+	implementation("org.apache.ignite:ignite-spring:${igniteVersion}")
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
 
