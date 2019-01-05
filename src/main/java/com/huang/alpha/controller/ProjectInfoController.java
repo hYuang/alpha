@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.fastjson.JSON;
+import com.huang.alpha.constants.Constants;
 import com.huang.alpha.enums.Result;
 import com.huang.alpha.model.Response;
 import com.huang.alpha.util.FileUtil;
@@ -25,7 +26,7 @@ public class ProjectInfoController {
 	public Response getProjectInfo() {
 		Response response = new Response();
 		try {
-			String fileInfo = FileUtil.getFileContent(info);
+			String fileInfo = FileUtil.getFileContent(info,Constants.CHARSET_UTF_8);
 			JSON data = JSON.parseObject(fileInfo);
 			response.setData(data);
 			response.setMsg(Result.SUCCESS.getValue());
