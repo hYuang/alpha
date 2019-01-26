@@ -39,7 +39,7 @@ ext {
 
 dependencies {
 
-	implementation('org.springframework.boot:spring-boot-starter-web'){
+	implementation('org.springframework.boot:spring-boot-starter-webflux'){
 		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat' 
 	}
 	implementation("org.apache.ignite:ignite-core:${igniteVersion}")
