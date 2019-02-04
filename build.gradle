@@ -35,11 +35,12 @@ ext {
 	nettyVersion = '4.1.32.Final'
 	mysqlVersion= '8.0.13'
 	undertowVersion = '2.0.17.Final'
+	rxjavaVersion = '2.2.6'
 }
 
 dependencies {
 
-	implementation('org.springframework.boot:spring-boot-starter-webflux'){
+	implementation('org.springframework.boot:spring-boot-starter-web'){
 		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat' 
 	}
 	implementation("org.apache.ignite:ignite-core:${igniteVersion}")
@@ -76,6 +77,8 @@ dependencies {
 	implementation("io.undertow:undertow-core:${undertowVersion}")
 	implementation("io.undertow:undertow-servlet:${undertowVersion}")
 	implementation("io.undertow:undertow-websockets-jsr:${undertowVersion}")
+	implementation("io.reactivex.rxjava2:rxjava:${rxjavaVersion}")
+	
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
 
