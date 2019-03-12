@@ -3,7 +3,6 @@ buildscript {
 		springBootVersion = '2.1.1.RELEASE'
 	}
 	repositories {
-		mavenLocal()
 		maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
 		mavenCentral()
 	}
@@ -49,12 +48,10 @@ dependencies {
 	implementation("io.springfox:springfox-swagger-ui:${swaggerVersion}")
 	implementation("com.alibaba:fastjson:${fastJsonVersion}")
 	implementation("io.netty:netty-all:${nettyVersion}")
-	implementation("io.netty:netty-example:${nettyVersion}")
 	implementation("org.mybatis:mybatis:${mybatisVersion}")
 	implementation("mysql:mysql-connector-java:${mysqlVersion}")
 	implementation("io.reactivex.rxjava2:rxjava:${rxjavaVersion}")
-	
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
-	
+	implementation("junit:junit:4.12")
 }
 

@@ -21,7 +21,7 @@ import io.swagger.annotations.Api;
 public class ProjectInfoController {
 	private final String  info = "info.json";
 	
-	@RequestMapping(name="/porject"  , method= {RequestMethod.GET})
+	@RequestMapping(value="/porject"  , method= {RequestMethod.POST})
 	@ResponseBody
 	public Response getProjectInfo() {
 		Response response = new Response();
