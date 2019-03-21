@@ -36,14 +36,13 @@ ext {
 	mysqlVersion= '8.0.13'
 	undertowVersion = '2.0.17.Final'
 	rxjavaVersion = '2.2.6'
+	mybatisSpringVersion ='2.0.0'
 }
 
 dependencies {
 
 	implementation('org.springframework.boot:spring-boot-starter-web')
-	implementation("org.apache.ignite:ignite-core:${igniteVersion}")
-	implementation("org.apache.ignite:ignite-indexing:${igniteVersion}")
-	implementation("org.apache.ignite:ignite-spring:${igniteVersion}")
+	implementation('org.springframework:spring-jdbc')
 	implementation("io.springfox:springfox-swagger2:${swaggerVersion}")
 	implementation("io.springfox:springfox-swagger-ui:${swaggerVersion}")
 	implementation("com.alibaba:fastjson:${fastJsonVersion}")
@@ -51,6 +50,7 @@ dependencies {
 	implementation("org.mybatis:mybatis:${mybatisVersion}")
 	implementation("mysql:mysql-connector-java:${mysqlVersion}")
 	implementation("io.reactivex.rxjava2:rxjava:${rxjavaVersion}")
+	implementation("org.mybatis:mybatis-spring:${mybatisSpringVersion}")
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	implementation("junit:junit:4.12")
 }
