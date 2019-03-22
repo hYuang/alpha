@@ -15,7 +15,7 @@ import org.springframework.core.env.Environment;
 import com.huang.alpha.constants.Constants;
 
 @Configuration
-@PropertySource(value = {"mybatis.properties"})
+@PropertySource(value = {"classpath:/mybatis.properties"})
 public class BeanConfig {
 
 	@Autowired
