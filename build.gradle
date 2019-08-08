@@ -41,6 +41,7 @@ ext {
 	undertowVersion = '2.0.17.Final'
 	rxjavaVersion = '2.2.6'
 	mybatisSpringVersion ='2.0.0'
+	reactorNettyVersion = '0.8.10.RELEASE'
 }
 
 dependencies {
@@ -50,7 +51,7 @@ dependencies {
 	implementation('org.springframework:spring-core')
 	implementation('org.springframework:spring-beans')
 	implementation("com.alibaba:fastjson:${fastJsonVersion}")
-	compile "io.projectreactor.netty:reactor-netty:0.8.10.RELEASE"
+	compile "io.projectreactor.netty:reactor-netty:${reactorNettyVersion}"
 	compile("io.netty:netty-all:${nettyVersion}")
 	implementation("org.mybatis:mybatis:${mybatisVersion}")
 	implementation("mysql:mysql-connector-java:${mysqlVersion}")
