@@ -13,9 +13,7 @@ import com.huang.alpha.enums.Result;
 import com.huang.alpha.model.Response;
 import com.huang.alpha.util.FileUtil;
 
-import io.swagger.annotations.Api;
 
-@Api("poject info")
 @RestController
 @RequestMapping("/info")
 public class ProjectInfoController {

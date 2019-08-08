@@ -25,6 +25,8 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
+	mavenLocal()
+	maven { url 'https://repo.spring.io/milestone' }
 	maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
 	mavenCentral()
 }
@@ -39,17 +41,16 @@ ext {
 	undertowVersion = '2.0.17.Final'
 	rxjavaVersion = '2.2.6'
 	mybatisSpringVersion ='2.0.0'
-	reactornettyVersion = '0.9.0.M3'
 }
 
 dependencies {
 
 	implementation('org.springframework.boot:spring-boot-starter-webflux')
 	implementation('org.springframework:spring-jdbc')
-	implementation("io.springfox:springfox-swagger2:${swaggerVersion}")
-	implementation("io.springfox:springfox-swagger-ui:${swaggerVersion}")
+	implementation('org.springframework:spring-core')
+	implementation('org.springframework:spring-beans')
 	implementation("com.alibaba:fastjson:${fastJsonVersion}")
-	compile("io.projectreactor.netty:reactor-netty:${reactornettyVersion}")
+	compile "io.projectreactor.netty:reactor-netty:0.8.10.RELEASE"
 	compile("io.netty:netty-all:${nettyVersion}")
 	implementation("org.mybatis:mybatis:${mybatisVersion}")
 	implementation("mysql:mysql-connector-java:${mysqlVersion}")
