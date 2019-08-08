@@ -32,7 +32,6 @@ public class ProjectInfoController {
 			response.setMsg(Result.SUCCESS.getValue());
 			response.setMsg_code(Result.SUCCESS_CODE.getValue());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			response.setData(null);
 			response.setMsg(Result.FAIL.getValue());
