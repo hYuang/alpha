@@ -19,7 +19,7 @@ import com.huang.alpha.util.FileUtil;
 public class ProjectInfoController {
 	private final String  info = "info.json";
 	
-	@RequestMapping(value="/porject"  , method= {RequestMethod.POST})
+	@RequestMapping(value="/project"  , method= {RequestMethod.POST})
 	@ResponseBody
 	public Response getProjectInfo() {
 		Response response = new Response();
