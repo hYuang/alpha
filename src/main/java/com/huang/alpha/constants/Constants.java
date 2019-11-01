@@ -7,4 +7,9 @@ public class Constants {
 	public final static String MYSQL_DRIVER ="driver";
 	public final static String MYSQL_USER= "user";
 	public final static String MYSQL_PASSWORD ="password";
+
+
+	public final static String LINE_SEPARATOR ="line.separator";
+
+	public final static String LOCALHOST="localhost";
 }
