@@ -42,6 +42,7 @@ ext {
 	rxjavaVersion = '2.2.6'
 	mybatisSpringVersion ='2.0.0'
 	reactorNettyVersion = '0.8.10.RELEASE'
+	jolVersion = '0.9'
 }
 
 dependencies {
@@ -57,6 +58,7 @@ dependencies {
 	implementation("mysql:mysql-connector-java:${mysqlVersion}")
 	implementation("io.reactivex.rxjava2:rxjava:${rxjavaVersion}")
 	implementation("org.mybatis:mybatis-spring:${mybatisSpringVersion}")
+	implementation("org.openjdk.jol:jol-core:${jolVersion}")
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	implementation("junit:junit:4.12")
 }
