@@ -15,4 +15,9 @@ public class AlphaFactoryBean implements FactoryBean<BaseRequest> {
     public Class<?> getObjectType() {
         return BaseRequest.class;
     }
+
+    @Override
+    public boolean isSingleton() {
+        return false;
+    }
 }
