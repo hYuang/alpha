@@ -6,10 +6,17 @@ import java.util.concurrent.ConcurrentMap;
 public class Test {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		ConcurrentMap<String,String> data = new ConcurrentHashMap<String,String>();
-		System.out.println(data.put("A", "B"));
-		System.out.println(data.put("A", "B"));
+		Runnable runnable = ()->{
+			try {
+				System.out.println("before thread");
+				Thread.sleep(10000);
+				System.out.println("after thread");
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		};
+		runnable.run();
+		System.out.println("main end");
 
 	}
 

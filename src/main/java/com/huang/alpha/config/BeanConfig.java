@@ -1,18 +1,15 @@
 package com.huang.alpha.config;
 
-import javax.sql.DataSource;
-
+import com.huang.alpha.constants.Constants;
 import org.apache.ibatis.datasource.pooled.PooledDataSource;
 import org.apache.ibatis.datasource.unpooled.UnpooledDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
 
-import com.huang.alpha.constants.Constants;
+import javax.sql.DataSource;
 
 @Configuration
 @PropertySource(value = {"classpath:/mybatis.properties"})
@@ -37,6 +34,12 @@ public class BeanConfig {
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
 		sqlSessionFactoryBean.setDataSource(getDataSource());
 		return sqlSessionFactoryBean.getObject();
+	}
+
+	@Bean
+	@Primary
+	public  DbInfo  getDbInfo(){
+		return null;
 	}
 	
 }

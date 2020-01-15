@@ -43,6 +43,7 @@ ext {
 	mybatisSpringVersion ='2.0.0'
 	reactorNettyVersion = '0.8.10.RELEASE'
 	jolVersion = '0.9'
+    javaPersistence = '2.2'
 }
 
 dependencies {
@@ -61,5 +62,6 @@ dependencies {
 	implementation("org.openjdk.jol:jol-core:${jolVersion}")
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	implementation("junit:junit:4.12")
+    implementation("javax.persistence:javax.persistence-api:${javaPersistence}")
 }
 

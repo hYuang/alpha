@@ -12,4 +12,6 @@ public class Constants {
 	public final static String LINE_SEPARATOR ="line.separator";
 
 	public final static String LOCALHOST="localhost";
+
+	public final static String EMPTY_STRING = "";
 }
