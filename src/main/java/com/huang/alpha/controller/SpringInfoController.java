@@ -6,7 +6,9 @@ import com.huang.alpha.model.Response;
 import com.huang.alpha.request.BeanInfoRequest;
 import com.huang.alpha.service.SpringService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpMethod;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,9 +22,9 @@ public class SpringInfoController {
     @Autowired
     private SpringService springService;
 
-    @RequestMapping("/singleton")
+    @RequestMapping(value = "/singleton",method = RequestMethod.GET)
     @ResponseBody
-    public Response getSingletonInfo(String name, Class type){
+    public Response getSingletonInfo(String name, String type){
 
         Response response = new Response();
         try {

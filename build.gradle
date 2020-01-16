@@ -44,6 +44,7 @@ ext {
 	reactorNettyVersion = '0.8.10.RELEASE'
 	jolVersion = '0.9'
     javaPersistence = '2.2'
+	lombokVersion = '1.18.10'
 }
 
 dependencies {
@@ -63,5 +64,8 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	implementation("junit:junit:4.12")
     implementation("javax.persistence:javax.persistence-api:${javaPersistence}")
+	implementation("org.projectlombok:lombok:${lombokVersion}")
+	implementation("io.springfox:springfox-swagger2:${swaggerVersion}")
+	implementation("io.springfox:springfox-swagger-ui:${swaggerVersion}")
 }
 
