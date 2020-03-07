@@ -8,6 +8,7 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
+import org.springframework.core.io.ClassPathResource;
 
 import javax.sql.DataSource;
 
@@ -33,6 +34,8 @@ public class BeanConfig {
 	public SqlSessionFactory getSqlSessionFactory() throws Exception {
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
 		sqlSessionFactoryBean.setDataSource(getDataSource());
+		ClassPathResource[] mapperLocation = {new ClassPathResource("classpath:mapper/*.xml")};
+		sqlSessionFactoryBean.setMapperLocations(mapperLocation);
 		return sqlSessionFactoryBean.getObject();
 	}
 
