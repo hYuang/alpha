@@ -32,13 +32,10 @@ repositories {
 }
 
 ext {
-	igniteVersion = '2.7.0'
-	swaggerVersion = '2.9.2'
 	fastJsonVersion ='1.2.54'
 	mybatisVersion = '3.4.6'
 	nettyVersion = '4.1.32.Final'
 	mysqlVersion= '8.0.13'
-	undertowVersion = '2.0.17.Final'
 	rxjavaVersion = '2.2.6'
 	mybatisSpringVersion ='2.0.0'
 	reactorNettyVersion = '0.8.10.RELEASE'
@@ -65,7 +62,5 @@ dependencies {
 	implementation("junit:junit:4.12")
     implementation("javax.persistence:javax.persistence-api:${javaPersistence}")
 	implementation("org.projectlombok:lombok:${lombokVersion}")
-	implementation("io.springfox:springfox-swagger2:${swaggerVersion}")
-	implementation("io.springfox:springfox-swagger-ui:${swaggerVersion}")
 }
 
