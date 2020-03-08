@@ -21,7 +21,7 @@ public class DataController {
 
     @RequestMapping(value = "/initdata/{total}", method = RequestMethod.GET)
     @ResponseBody
-    public int initUserData(@RequestParam("tatal") int total){
+    public int initUserData(@PathVariable("total") int total){
 
         List<User> userList = new ArrayList<User>();
         for (int i = 0; i < total; i++) {

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 
 import javax.sql.DataSource;
 
@@ -34,15 +35,9 @@ public class BeanConfig {
 	public SqlSessionFactory getSqlSessionFactory() throws Exception {
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
 		sqlSessionFactoryBean.setDataSource(getDataSource());
-		ClassPathResource[] mapperLocation = {new ClassPathResource("classpath:mapper/*.xml")};
+		Resource[] mapperLocation = {new ClassPathResource("mapper/UserMapper.xml")};
 		sqlSessionFactoryBean.setMapperLocations(mapperLocation);
 		return sqlSessionFactoryBean.getObject();
-	}
-
-	@Bean
-	@Primary
-	public  DbInfo  getDbInfo(){
-		return null;
 	}
 	
 }
