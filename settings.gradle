@@ -1,1 +1,3 @@
 rootProject.name = 'alpha'
+include 'demo'
+
