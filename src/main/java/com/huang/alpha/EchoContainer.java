@@ -1,4 +1,4 @@
-package com.huang.demo;
+package com.huang.alpha;
 
 import com.huang.demo.service.DemoService;
 import com.huang.demo.service.impl.DemoServiceImpl;
